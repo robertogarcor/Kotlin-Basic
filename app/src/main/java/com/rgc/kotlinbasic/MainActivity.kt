@@ -52,11 +52,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Tipos de datos
+     * Tipos de datos en Kotlin
      */
     private fun tiposDeDatos() {
 
         //Tipos de datos numericos (Byte, Short, Integer, Double, Float, Long)
+
         //Enteros (Integer)
         var int1 : Int = 2
         var int2 = 5
@@ -82,8 +83,6 @@ class MainActivity : AppCompatActivity() {
         println(boolean1 == boolean2)
         println(boolean1 && boolean2)
         println(boolean1 || boolean2)
-
-
 
     }
 
