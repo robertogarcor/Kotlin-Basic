@@ -135,7 +135,6 @@ class MainActivity : AppCompatActivity() {
             println("el valor 40 no es el correcto")
         }
 
-
     }
 
 
