@@ -16,8 +16,11 @@ class MainActivity : AppCompatActivity() {
         // Tipos de Datos
         tiposDeDatos()
 
-        // Condicional sentencia if
+        // Condicional sentencia if / else
         condicionalIf()
+
+        // Condifional sentencia when / else
+        condicionalWhen()
 
     }
 
@@ -138,6 +141,54 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    /**
+     * Condicional sentencia when / else
+     */
+    private fun condicionalWhen() {
+
+        var pais : String = "Italia"
+
+        when(pais) {
+            "España", "Mexico", "Venezuela", "Peru", "Ecuador" -> {
+                println("El idioma es español")
+            }
+            "Alemania" -> {
+                println("El idioma es aleman")
+            }
+            "Inglaterra" -> {
+                println("El idioma es ingles")
+            }
+            "Italia" -> {
+                println("El idioma es italiano")
+            }
+            else -> {
+                println("El idioma predeterminado es el ingles o español")
+            }
+        }
+
+        /////////////////////////////////////////////////////////////////
+
+        var valor : Int = 8
+
+        when(valor) {
+            in 0..1 -> {
+                println("El valor 0 o 1")
+            }
+            2 -> {
+                println("El valor es 2")
+            }
+            in 3..6 -> {
+                println("El valor esta entre 3 y 6")
+            }
+            7,8 -> {
+                println("El valor es 7 o 8")
+            }
+            else -> {
+                println("El valor es mas de 8")
+            }
+        }
+
+    }
 
 
 
