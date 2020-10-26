@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         // Condifional sentencia when / else
         condicionalWhen()
 
+        // Arrays
+        arrays()
+
     }
 
     /**
@@ -187,8 +190,66 @@ class MainActivity : AppCompatActivity() {
                 println("El valor es mas de 8")
             }
         }
+    }
+
+    private fun arrays() {
+
+        //Vector
+        var myArray = arrayOf("a","b") // Array/Vector de 2 posiciones no se pueden arregar mas
+        println(myArray.size)
+
+        // ArrayList
+        var myArrayList = arrayListOf<String>()
+        myArrayList.add("nombre")
+        myArrayList.add("edad")
+        myArrayList.add("sexo")
+        //myArrayList.add(8) // No se puede agregar un elemento int (el arrayList es de Strings(
+        println(myArrayList)
+
+        var myArrayListNumber = arrayListOf<Int>(0,1,2,10,18)
+        println(myArrayListNumber)
+
+        // Añadir varios elementos
+        myArrayList.addAll(listOf("nacionalidad", "profesion"))
+        myArrayListNumber.addAll(listOf(4,7,2))
+        println(myArrayList)
+        println(myArrayListNumber)
+        println(myArrayListNumber.size)
+
+        // Acceso a datos
+        println(myArray.get(0))
+        println(myArray[1])
+        println(myArrayList.get(3))
+        println(myArrayListNumber[2])
+
+        //Modificar datos
+        myArray[0] = "d"
+        myArrayList[1] = "edadMod"
+        println(myArray[0] + " -- " + myArrayList)
+
+        // Borrar datos
+        myArray.drop(0)
+        for(pos in myArray) {
+            println(pos)
+        }
+
+        myArrayList.removeAt(1)
+        myArrayListNumber.removeAt(2)
+        println(myArrayList)
+        println(myArrayListNumber)
+
+        // Otras operaciones
+        myArrayListNumber.sort()
+        println("ArrayList size:" + myArrayList.size)
+        println("ArrayList count:" + myArrayList.count())
+        myArrayListNumber.forEach { println(it) }
+
+        println(myArrayList.first())
+        println(myArrayListNumber.last())
 
     }
+
+
 
 
 
