@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         // Arrays
         arrays()
 
+        // Maps
+        maps()
+
     }
 
     /**
@@ -192,6 +195,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Arrays/Arreglos/List en Kotlin
+     */
     private fun arrays() {
 
         //Vector
@@ -249,6 +255,42 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Mapas o diccionarios en Kotlin
+     */
+    fun maps() {
+
+        // Declaracion
+        var myMap : Map<String, String> = mapOf()
+        var myMap2 : Map<Int, String> = mapOf()
+
+        // Inicializacion con datos elementos
+        // Mapa mutable -> permite añadir elementos
+        myMap = mutableMapOf("Nombre" to "Roberto", "Edad" to "45", "Profesion" to "Desarrollador")
+        // Mapa no mutable -> no permite realizar operaciones
+        myMap2 = mapOf(1 to "primero", 2 to "segundo", 3 to "tercero")
+        println(myMap)
+        println(myMap2)
+
+        // Añadir un elemento
+        myMap["Sexo"] = "Hombre"
+        myMap.put("Nacionalidad", "España")
+        println(myMap)
+
+        // Acceso a un dato
+        println(myMap2[1])
+        println(myMap.get("Nombre"))
+
+        // Actualizar elementos
+        myMap["Nombre"] = "Roberto Apellidos"
+        myMap.put("Edad", "46")
+        println(myMap)
+
+        // Borrar datos
+        myMap.remove("Nacionalidad")
+        println(myMap)
+
+    }
 
 
 
