@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         // Maps
         maps()
 
+        // Bucle For
+        bucleFor()
+
+
     }
 
     /**
@@ -292,7 +296,50 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Bucles for en kotlin
+     */
+    fun bucleFor() {
 
+        var myArrayList : ArrayList<Int> = arrayListOf<Int>(1,2,3,4,5,7,8,9,10,12)
+        var myMap : Map<Int, String> = mutableMapOf(1 to "primero", 2 to "segundo", 3 to "tercero", 4 to "cuarto")
+
+        // Blucle for ArrayList
+        for(Number in myArrayList) {
+            println(Number)
+        }
+
+        // Bucle for Maps
+        for((key,valor) in myMap) {
+            println("$key = $valor")
+        }
+        // Bucle for Maps Key / Value Object
+        for(element in myMap) {
+            println("${element.key} + --- +  ${element.value}")
+        }
+
+        // Bucle for con rango
+        for (n in 0..20) {
+            println(n)
+        }
+        // Bucle de 0 a 20 de 2 en 2
+        for (n in 0..20 step 2) {
+            println(n)
+        }
+        // Bucle entre 0 y 10 no incluidos
+        for (n in 0 until 10) {
+            println(n)
+        }
+        // Bucle de 20 a 0
+        for (n in 20 downTo 0) {
+            println(n)
+        }
+        // Bucle de 10 a 0 no incluidos
+        for (n in 10 until 0) {
+            println(n)
+        }
+
+    }
 
 
 }
