@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         // Bucle For
         bucleFor()
 
+        // Bucle While
+        bucleWhile()
+
 
     }
 
@@ -340,6 +343,31 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    /**
+     * Bucle While (Mientras) en Kotlin
+     */
+    fun bucleWhile() {
+
+        println("While")
+
+        var x = 0
+        while(x<10) {
+            println(x)
+            x++
+        }
+
+        println("While 2")
+
+        var j = 0
+        while(j<10) {
+            println(j)
+            j += 2
+        }
+
+    }
+
+
 
 
 }
