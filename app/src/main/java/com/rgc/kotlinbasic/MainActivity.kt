@@ -369,6 +369,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Null Safely (Control / Seguridad valores null en Kotlin)
+     */
     fun nullSafely() {
         var myString = "Una cadena de texto"
         //myString = null // Esto da un error en la compilacion
