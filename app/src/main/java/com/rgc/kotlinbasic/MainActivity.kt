@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity() {
         // Bucle While
         bucleWhile()
 
+        // Null Safely (Control/seguridad en puntos nulos
+        nullSafely()
 
     }
 
@@ -363,6 +365,35 @@ class MainActivity : AppCompatActivity() {
         while(j<10) {
             println(j)
             j += 2
+        }
+
+    }
+
+    fun nullSafely() {
+        var myString = "Una cadena de texto"
+        //myString = null // Esto da un error en la compilacion
+
+        // Null Safely
+        var myStringNullSafely: String?= "El ? indica que la variable puede se nula 'variable?'"
+        myStringNullSafely = null
+        println("La variable ahora es null. Valor :" + myStringNullSafely)
+
+        // Safe call (Llamadas seguras)
+        //println("Asegurarse/Forzar que una variable no puede se nula con 'variable!!'" + myStringNullSafely!!)
+
+        println("Si una variable puede se nula un control es 'variable?'. Su valor sigue siendo: " + myStringNullSafely?.length)
+
+        myStringNullSafely?.let {
+            println(it) // Se ejecuta cuando no es null
+        } ?: run {
+            println(myStringNullSafely)  // Se ejecuta cuando es null
+        }
+
+        myStringNullSafely = "Ya no soy null"
+        myStringNullSafely.let {
+            println(it)
+        } ?: run {
+            println("Sigo siendo null")
         }
 
     }
