@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         // Null Safely (Control/seguridad en puntos nulos
         nullSafely()
 
+        // Funciones
+        funciones()
+
     }
 
     /**
@@ -401,7 +404,49 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Funciones en Kotlin
+     */
+    fun funciones() {
 
+        /**
+         * Función sin retorno
+         */
+        fun funcionHola() {
+            println("Hola funcion simple")
+        }
+
+        /**
+         * Función con un parametro de entrada
+         */
+        fun funcionUnParametro(cadena: String) {
+            println(cadena)
+        }
+
+        /**
+         * Función suma con varios parametros de entrada
+         */
+        fun funcionSumaParametros(num1: Int, num2: Int) {
+            println("La suma de los parametros enteros de entrada es ${num1 + num2}")
+        }
+
+        /**
+         * Función con retorno de una operación suma
+         */
+        fun funcionSumaConRetorno(num1: Int, num2: Int) : Int {
+            return num1 + num2
+        }
+
+        funcionHola()
+        funcionHola()
+        funcionUnParametro("Soy una función con un parametro de entrada tipo String")
+        funcionSumaParametros(4, 6)
+        var suma: Int = funcionSumaConRetorno(6, 10)
+        println("Variable suma de la función suma con retorno:  $suma")
+        println(funcionSumaConRetorno(funcionSumaConRetorno(10, 10), 20))
+        
+
+    }
 
 
 }
