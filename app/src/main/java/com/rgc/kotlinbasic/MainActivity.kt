@@ -40,6 +40,9 @@ class MainActivity : AppCompatActivity() {
         // Funciones
         funciones()
 
+        // Classes
+        Classes()
+
     }
 
     /**
@@ -380,7 +383,7 @@ class MainActivity : AppCompatActivity() {
         //myString = null // Esto da un error en la compilacion
 
         // Null Safely
-        var myStringNullSafely: String?= "El ? indica que la variable puede se nula 'variable?'"
+        var myStringNullSafely: String? = "El ? indica que la variable puede se nula 'variable?'"
         myStringNullSafely = null
         println("La variable ahora es null. Valor :" + myStringNullSafely)
 
@@ -444,7 +447,33 @@ class MainActivity : AppCompatActivity() {
         var suma: Int = funcionSumaConRetorno(6, 10)
         println("Variable suma de la función suma con retorno:  $suma")
         println(funcionSumaConRetorno(funcionSumaConRetorno(10, 10), 20))
-        
+
+    }
+
+    fun Classes() {
+
+        var roberto = Persona("Roberto", 30 , arrayListOf("Deporte", "Lectura"), Persona.TipoPelo.CASTAÑO, null)
+        println("${roberto.name} tiene una edad de ${roberto.edad} y un color de pelo ${roberto.colorPelo()}")
+        roberto.edad = 35
+        println("Ahora la edad de " + roberto.name + " es " +  roberto.edad)
+        println("${roberto.name} tiene unas aficiones tales como : ${roberto.aficionesPersona()} y un color de pelo ${roberto.colorPelo()}")
+
+        var pepa = Persona("Pepa", 25, null, Persona.TipoPelo.MORENO, roberto)
+        println(pepa.name +
+                " tiene una edad de " +
+                pepa.edad +
+                " unas aficiones " +
+                pepa.aficionesPersona() +
+                " y un color de pelo " +
+                pepa.colorPelo() +
+                " ademas es amiga de " +
+                pepa.amigos?.name +
+                " que tiene una edad de " +
+                pepa.amigos?.edad +
+                " , un color de pelo " +
+                pepa.amigos?.colorPelo() +
+                " y unas aficiciones : " +
+                pepa.amigos?.aficionesPersona() )
 
     }
 
