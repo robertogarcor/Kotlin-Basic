@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         // Bucle While
         bucleWhile()
 
-        // Null Safely (Control/seguridad en puntos nulos
+        // Null Safely (Control/seguridad en puntos nulos)
         nullSafely()
 
         // Funciones
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
      * Variables y Constantes en Kotlin
      */
     private fun variableConstantes() {
-        // Variable (Una variable tiene inicializarse con un tipo de dato o valor
+        // Variable (Una variable tiene inicializarse con un tipo de dato o valor)
         var myVariable1 : String
         var myVariable2 = "Hola Kotlin!"
 
@@ -216,7 +216,7 @@ class MainActivity : AppCompatActivity() {
     private fun arrays() {
 
         //Vector
-        var myArray = arrayOf("a","b") // Array/Vector de 2 posiciones no se pueden arregar mas
+        var myArray = arrayOf("a","b") // Array/Vector de 2 posiciones. No se pueden agregar más.
         println(myArray.size)
 
         // ArrayList
@@ -224,7 +224,7 @@ class MainActivity : AppCompatActivity() {
         myArrayList.add("nombre")
         myArrayList.add("edad")
         myArrayList.add("sexo")
-        //myArrayList.add(8) // No se puede agregar un elemento int (el arrayList es de Strings(
+        //myArrayList.add(8) // No se puede agregar un elemento int (el arrayList es de Strings)
         println(myArrayList)
 
         var myArrayListNumber = arrayListOf<Int>(0,1,2,10,18)
@@ -451,7 +451,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Funciones en Kotlin
+     * Classes en Kotlin
      */
     fun classes() {
 
