@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         funciones()
 
         // Classes
-        Classes()
+        classes()
 
     }
 
@@ -450,9 +450,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun Classes() {
+    /**
+     * Funciones en Kotlin
+     */
+    fun classes() {
 
-        var roberto = Persona("Roberto", 30 , arrayListOf("Deporte", "Lectura"), Persona.TipoPelo.CASTAÑO, null)
+        var roberto = Persona("Roberto", 30, arrayListOf("Deporte", "Lectura"), Persona.TipoPelo.CASTAÑO, null)
         println("${roberto.name} tiene una edad de ${roberto.edad} y un color de pelo ${roberto.colorPelo()}")
         roberto.edad = 35
         println("Ahora la edad de " + roberto.name + " es " +  roberto.edad)
